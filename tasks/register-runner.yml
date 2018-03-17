@@ -14,8 +14,8 @@
     --limit '{{ item.limit | d("0") }}'
     --tag-list '{{ item.tags | d([]) | join(",") }}'
     --executor '{{ item.executor | d("shell") }}'
-    --run-untagged=true
-    --locked=false
+    --run-untagged={{ item.run_untagged |  d("true") }}
+    --locked={{ item.locked | d("false") }}
     --request-concurrency 1
     {% if item.executor == 'docker' %}
     --docker-image "{{ item.docker_image }}"
