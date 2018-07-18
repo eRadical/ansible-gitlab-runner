@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: gitlab-runner
   author: Gabriel PREDA
   description: GitLab Runner
   license: MIT
