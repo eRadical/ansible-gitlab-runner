@@ -1,0 +1,15 @@
+---
+# https://gitlab.com/gitlab-org/gitlab-runner/issues/4401
+- name: DNF enable PyCharm COPR repo
+  command: /usr/bin/dnf -y copr enable snecker/gitlab-runner
+  args:
+    creates: "/etc/yum.repos.d/_copr:copr.fedorainfracloud.org:snecker:gitlab-runner.repo"
+    warn: false
+  become: true
+
+- name: Install GitLab Runner
+  yum:
+    name: gitlab-runner
+    state: latest
+    update_cache: yes
+  tags: skip_ansible_lint
