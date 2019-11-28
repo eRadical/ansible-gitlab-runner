@@ -61,6 +61,7 @@ gitlab_runner_list:
 - coordinator_url: 'https://your.gitlab.installation/ci'
   registration_token: ''
   description: '{{ ansible_hostname }}__shell'
+  output_limit: 102400	# 100MB - --output-limit flag is in Kb
   executor: 'shell'
   tags:
   - shell
@@ -68,6 +69,7 @@ gitlab_runner_list:
 - coordinator_url: 'https://your.gitlab.installation/ci'
   registration_token: ''
   description: '{{ ansible_hostname }}__docker'
+  output_limit: 102400	# 100MB - --output-limit flag is in Kb
   executor: 'docker'
   docker_image: "centos:latest"
   docker_tlsverify: "false"

@@ -17,6 +17,7 @@
     --run-untagged={{ item.run_untagged |  d("true") }}
     --locked={{ item.locked | d("false") }}
     --request-concurrency 1
+    --output-limit '{{ item.output_limit }}'
     {% if item.executor == 'docker' %}
     --docker-image "{{ item.docker_image }}"
     --docker-tlsverify='{{ item.docker_tlsverify | d("false") }}'
