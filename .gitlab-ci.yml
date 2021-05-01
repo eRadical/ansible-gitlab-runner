@@ -1,5 +1,6 @@
 image:
   name: fedora:34
+  entrypoint: /bin/bash
 
 stages:
   - qa
