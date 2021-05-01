@@ -13,6 +13,6 @@ lint:
     - gitlab-org
   script:
     - dnf -y install pip
-    - pip install ansible-lint
+    - pip install ansible ansible-lint
     - ansible-lint -q .
   allow_failure: true
