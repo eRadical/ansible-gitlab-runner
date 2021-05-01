@@ -6,7 +6,7 @@ lint:
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
   tags:
-    - shell
+    - gitlab-org
   script:
     - pip install ansible-lint
     - ansible-lint -q .
