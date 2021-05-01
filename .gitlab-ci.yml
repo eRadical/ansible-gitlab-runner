@@ -12,7 +12,7 @@ lint:
   tags:
     - gitlab-org
   script:
-    - dnf -y install pip
+    - dnf -y install pip git
     - pip install ansible ansible-lint
     - ansible-lint -q .
   allow_failure: true
