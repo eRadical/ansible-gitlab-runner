@@ -1,3 +1,6 @@
+image:
+  name: fedora:34
+
 stages:
   - qa
 
