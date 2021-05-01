@@ -1,0 +1,13 @@
+stages:
+  - qa
+
+lint:
+  stage: qa
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  tags:
+    - shell
+  script:
+    - pip install ansible-lint
+    - ansible-lint -q .
+  allow_failure: true

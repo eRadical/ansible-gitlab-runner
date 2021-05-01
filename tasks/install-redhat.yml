@@ -21,10 +21,11 @@
   template:
     src: runner_gitlab-runner.repo.j2
     dest: /etc/yum.repos.d/runner_gitlab-runner.repo
+    mode: '0644'
 
 - name: Install GitLab Runner
   yum:
     name: gitlab-runner
     state: latest
-    update_cache: yes
+    update_cache: true
   tags: skip_ansible_lint

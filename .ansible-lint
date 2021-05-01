@@ -1,0 +1,15 @@
+---
+exclude_paths:
+- .gitlab-ci.yaml
+
+use_default_rules: true
+
+warn_list:
+  - no-tabs
+
+skip_list:
+  - command-instead-of-shell  # Use shell only when shell functionality is required
+  - meta-no-info  # meta/main.yml should contain relevant info
+  - meta-no-tags  # Tags must contain lowercase letters and digits only
+  - empty-string-compare # ansible & ansible bug - see https://github.com/ansible-community/ansible-lint/issues/457
+

@@ -28,5 +28,5 @@
   apt:
     name: gitlab-runner
     state: latest
-    update_cache: yes
+    update_cache: true
   tags: skip_ansible_lint
